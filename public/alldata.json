@@ -1,0 +1,165 @@
+
+
+[
+    {
+      "product_id": "001",
+      "product_title": "Apple MacBook Air M1",
+      "product_image": "https://via.placeholder.com/150",
+      "category": "Laptops",
+      "price": 999.99,
+      "description": "Apple MacBook Air with M1 chip, 13-inch Retina display, 8GB RAM, and 256GB SSD.",
+      "specification": [
+        "Apple M1 chip",
+        "13.3-inch Retina display",
+        "8GB RAM",
+        "256GB SSD"
+      ],
+      "availability": true,
+      "rating": 4.8
+    },
+    {
+      "product_id": "002",
+      "product_title": "Apple iPhone 15 Pro",
+      "product_image": "https://via.placeholder.com/150",
+      "category": "Smartphones",
+      "price": 1299.99,
+      "description": "iPhone 15 Pro with A17 Bionic chip, 6.1-inch Super Retina XDR display, and 128GB storage.",
+      "specification": [
+        "A17 Bionic chip",
+        "6.1-inch Super Retina XDR display",
+        "128GB storage",
+        "5G enabled"
+      ],
+      "availability": true,
+      "rating": 4.9
+    },
+    {
+      "product_id": "003",
+      "product_title": "Samsung Galaxy S23 Ultra",
+      "product_image": "https://via.placeholder.com/150",
+      "category": "Smartphones",
+      "price": 1199.99,
+      "description": "Samsung Galaxy S23 Ultra with Snapdragon 8 Gen 2, 6.8-inch AMOLED display, and 256GB storage.",
+      "specification": [
+        "Snapdragon 8 Gen 2",
+        "6.8-inch AMOLED display",
+        "256GB storage",
+        "108MP main camera"
+      ],
+      "availability": true,
+      "rating": 4.7
+    },
+    {
+      "product_id": "004",
+      "product_title": "Dell XPS 13",
+      "product_image": "https://via.placeholder.com/150",
+      "category": "Laptops",
+      "price": 1099.99,
+      "description": "Dell XPS 13 with Intel Core i7, 13.4-inch FHD+ display, 16GB RAM, and 512GB SSD.",
+      "specification": [
+        "Intel Core i7",
+        "13.4-inch FHD+ display",
+        "16GB RAM",
+        "512GB SSD"
+      ],
+      "availability": true,
+      "rating": 4.6
+    },
+    {
+      "product_id": "005",
+      "product_title": "Samsung Galaxy Book 3",
+      "product_image": "https://via.placeholder.com/150",
+      "category": "Laptops",
+      "price": 849.99,
+      "description": "Samsung Galaxy Book 3 with Intel Core i5, 15.6-inch display, 8GB RAM, and 256GB SSD.",
+      "specification": [
+        "Intel Core i5",
+        "15.6-inch display",
+        "8GB RAM",
+        "256GB SSD"
+      ],
+      "availability": true,
+      "rating": 4.5
+    },
+    {
+      "product_id": "006",
+      "product_title": "Apple MacBook Pro 14-inch",
+      "product_image": "https://via.placeholder.com/150",
+      "category": "Laptops",
+      "price": 1999.99,
+      "description": "MacBook Pro 14-inch with M1 Pro chip, 16GB RAM, and 512GB SSD.",
+      "specification": [
+        "Apple M1 Pro chip",
+        "14-inch Retina display",
+        "16GB RAM",
+        "512GB SSD"
+      ],
+      "availability": true,
+      "rating": 4.9
+    },
+    {
+      "product_id": "007",
+      "product_title": "iPhone 14",
+      "product_image": "https://via.placeholder.com/150",
+      "category": "Smartphones",
+      "price": 899.99,
+      "description": "iPhone 14 with A15 Bionic chip, 6.1-inch display, and 128GB storage.",
+      "specification": [
+        "A15 Bionic chip",
+        "6.1-inch display",
+        "128GB storage",
+        "Dual-camera system"
+      ],
+      "availability": true,
+      "rating": 4.8
+    },
+    {
+      "product_id": "008",
+      "product_title": "Samsung Galaxy Z Fold 5",
+      "product_image": "https://via.placeholder.com/150",
+      "category": "Smartphones",
+      "price": 1799.99,
+      "description": "Samsung Galaxy Z Fold 5 with foldable 7.6-inch AMOLED display and 512GB storage.",
+      "specification": [
+        "Foldable 7.6-inch AMOLED display",
+        "Snapdragon 8+ Gen 2",
+        "512GB storage",
+        "12GB RAM"
+      ],
+      "availability": true,
+      "rating": 4.7
+    },
+    {
+      "product_id": "009",
+      "product_title": "Samsung Galaxy Tab S9",
+      "product_image": "https://via.placeholder.com/150",
+      "category": "Tablets",
+      "price": 799.99,
+      "description": "Samsung Galaxy Tab S9 with 11-inch AMOLED display and 128GB storage.",
+      "specification": [
+        "11-inch AMOLED display",
+        "Snapdragon 8 Gen 2",
+        "128GB storage",
+        "S Pen included"
+      ],
+      "availability": true,
+      "rating": 4.6
+    },
+    {
+      "product_id": "010",
+      "product_title": "Apple MacBook Pro 16-inch",
+      "product_image": "https://via.placeholder.com/150",
+      "category": "Laptops",
+      "price": 2499.99,
+      "description": "MacBook Pro 16-inch with M2 Max chip, 32GB RAM, and 1TB SSD.",
+      "specification": [
+        "Apple M2 Max chip",
+        "16-inch Retina display",
+        "32GB RAM",
+        "1TB SSD"
+      ],
+      "availability": false,
+      "rating": 4.9
+    }
+  ]
+  
