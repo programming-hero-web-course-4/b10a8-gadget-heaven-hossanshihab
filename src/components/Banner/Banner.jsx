@@ -3,8 +3,8 @@
 import bannerImage from '../../assets/banner.jpg'
 const Banner = () => {
   return (
-    <div className="bg-purple-500 h-[500px] mb-20 text-white text-center py-16">
-      <h2 className="text-4xl font-bold mb-4">
+    <div className="bg-purple-800 text-white text-center p-10 space-y-6">
+      <h2 className="text-4xl font-bold">
         Upgrade Your Tech Accessorize with <br />
         Gadget Heaven Accessories
       </h2>
@@ -13,7 +13,7 @@ const Banner = () => {
         the next level. From smart devices to  <br />
         the coolest accessories, we have it all!
       </p>
-      <button className="bg-white text-purple-500 px-6 py-2 rounded-full font-semibold hover:bg-gray-200">
+      <button className="bg-white btn text-purple-500 px-6 py-2 rounded-full font-semibold hover:bg-gray-200">
         Shop Now
       </button>
 
