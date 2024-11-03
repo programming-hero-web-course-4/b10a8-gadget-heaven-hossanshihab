@@ -5,6 +5,12 @@
 const Footer = () => {
   return (
     <div className="">
+        <div className="text-center p-10">
+          <h1 className="text-4xl font-bold">Gadget Heaven</h1>
+          <br />
+        <p className="text-2xl p-2">Landing the way in cutting-edge techonology and innovation</p>
+        <hr />
+        </div>
       <footer className="footer bg-base-200 text-base-content p-10">
         <nav>
           <h6 className="footer-title">Services</h6>
