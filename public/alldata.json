@@ -176,6 +176,10 @@
       ],
       "availability": true,
       "rating": 4.6
+    },
+    {
+      "product_id": "12",
+      "category": "Watch"
     }
   ]
   

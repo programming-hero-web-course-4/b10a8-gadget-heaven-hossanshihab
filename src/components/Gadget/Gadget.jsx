@@ -5,7 +5,7 @@ const Gadget = ({ gadget }) => {
   const { product_image, product_title, price, category,product_id } = gadget;
   return (
     <div>
-      <div className="card bg-base-100 w-96 shadow-xl m-5">
+      <div className="card bg-base-100 h-96 shadow-xl m-5">
         <figure className="p-2">
           <img
             className="h-[200px] rounded-2xl"

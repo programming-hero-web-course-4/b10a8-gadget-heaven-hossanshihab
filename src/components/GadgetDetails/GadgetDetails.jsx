@@ -1,5 +1,6 @@
 import { useLoaderData, useParams } from "react-router-dom";
 import { FaHeart } from 'react-icons/fa';
+import { addToStoredCartList, addToStoredWishList } from "../../utility/AddToDb";
 
 
 const GadgetDetails = () => {
@@ -7,12 +8,18 @@ const GadgetDetails = () => {
     const data = useLoaderData();
     const {product_id} = useParams();
     const id = parseInt(product_id);
-    console.log(product_id);
+    console.log(id);
     // Need one data thats why use find 
     const gadget = data.find(gadget => gadget.product_id === product_id)
     const {price,description,product_title,product_image,rating,specification} = gadget;
-    const handleAddToCart = () => {
-        
+
+
+    const handleAddToCart = (id) => {
+      addToStoredCartList(id)
+    }
+
+    const handleAddToWish = (id) => {
+      addToStoredWishList(id)
     }
 
 
@@ -41,8 +48,8 @@ const GadgetDetails = () => {
 
       <div className="flex items-center gap-5">
     
-      <button onClick={handleAddToCart} className="btn bg-purple-500 text-white font-bold">Add To Cart</button>
-      <button className="btn">
+      <button onClick={()=>handleAddToCart(product_id)} className="btn bg-purple-500 text-white font-bold">Add To Cart</button>
+      <button onClick={()=>handleAddToWish(product_id)} className="btn">
       <FaHeart style={{ color: 'red', fontSize: '24px' }} />
       </button>
       </div>
