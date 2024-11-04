@@ -38,7 +38,6 @@ const Wish = () => {
                     <h1 className="text-5xl font-bold">{cart.product_title}</h1>
                     <p className="py-4">{cart.description}</p>
                     <p className="py-2 font-bold text-2xl">Price: {cart.price}$</p>
-                    <button className="btn btn-primary">Delete</button>
                 </div>
             </div>
         </div>

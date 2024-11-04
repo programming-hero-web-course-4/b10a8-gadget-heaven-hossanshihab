@@ -47,5 +47,8 @@ const addToStoredWishList = (id) => {
         toast('This item added cart list')
     }
 }
+export const updateStoredCartList = (updatedList) => {
+    localStorage.setItem('cart', JSON.stringify(updatedList));
+  };
 
 export {addToStoredCartList,getStoredCartList, addToStoredWishList,getStoredWishList}

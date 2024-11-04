@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useLoaderData } from "react-router-dom";
-import { getStoredCartList } from "../../utility/AddToDb";
-
+import { getStoredCartList, updateStoredCartList } from "../../utility/AddToDb"; 
+import { toast } from 'react-toastify';
 const Cart = () => {
   const [cartList, setCartList] = useState([]);
   const [sorted, setSorted] = useState(false); 
@@ -9,22 +9,25 @@ const Cart = () => {
 
   useEffect(() => {
     const storedCartList = getStoredCartList();
-    console.log(storedCartList);
+    console.log("Stored Cart List:", storedCartList);
 
     const storedCartListInt = storedCartList.map((id) => parseInt(id, 10));
-    console.log(storedCartListInt);
+    console.log("Stored Cart List Int:", storedCartListInt);
 
-    const cartList = allGadget.filter((gadget) =>
-      storedCartListInt.includes(parseInt(gadget.product_id, 10))
-    );
-    setCartList(cartList);
-    console.log(cartList);
+    if (allGadget && allGadget.length > 0) {
+      const cartList = allGadget.filter((gadget) =>
+        storedCartListInt.includes(parseInt(gadget.product_id, 10))
+      );
+      setCartList(cartList);
+    } else {
+      toast("No gadgets found.");
+    }
   }, [allGadget]);
 
   // Calculate total cost
   const totalCost = cartList.reduce((acc, item) => acc + item.price, 0);
 
-  //sort cart items by price
+  // Sort cart items by price
   const handleSortByPrice = () => {
     const sortedCartList = [...cartList].sort((a, b) => {
       return sorted ? a.price - b.price : b.price - a.price; 
@@ -33,38 +36,59 @@ const Cart = () => {
     setSorted(!sorted);
   };
 
+  const handleDelete = (productId) => {
+    console.log("Deleting product with ID:", productId); 
+    const updatedCartList = cartList.filter(cart => cart.product_id !== productId);
+    console.log("Updated Cart List after deletion:", updatedCartList); 
+    setCartList(updatedCartList);
+
+    const storedCartList = getStoredCartList();
+    const updatedStoredCartList = storedCartList.filter(id => parseInt(id, 10) !== productId);
+    console.log("Updated Stored Cart List:", updatedStoredCartList); 
+    updateStoredCartList(updatedStoredCartList); 
+  };
+
   return (
     <div className="cart-list">
       <div className="flex p-10 justify-between items-center w-11/12 mx-auto">
         <h1 className="font-bold">Cart</h1>
         <div className="flex justify-between items-center gap-10">
           <h2 className="font-bold">Total Cost: {totalCost}$</h2>
-          <button className="btn  bg-purple-500 text-white" onClick={handleSortByPrice}>
+          <button className="btn bg-purple-500 text-white" onClick={handleSortByPrice}>
             Sort By Price
           </button>
           <button className="btn bg-purple-500 text-white">Purchase</button>
         </div>
       </div>
-      {cartList.map((cart) => (
-        <div
-          key={cart.product_id} 
-          className="hero bg-base-200 w-full p-10 mb-4"
-        >
-          <div className="hero-content flex-col lg:flex-row border-2 rounded-2xl">
-            <img
-              src={cart.product_image}
-              alt={cart.product_title}
-              className="max-w-sm rounded-lg shadow-2xl"
-            />
-            <div className="flex flex-col justify-center p-2">
-              <h1 className="text-5xl font-bold">{cart.product_title}</h1>
-              <p className="py-4">{cart.description}</p>
-              <p className="py-2 font-bold text-2xl">Price: {cart.price}$</p>
-              <button className="btn btn-primary">Delete</button>
+      {cartList.length > 0 ? ( 
+        cartList.map((cart) => (
+          <div
+            key={cart.product_id} 
+            className="hero bg-base-200 w-full p-10 mb-4"
+          >
+            <div className="hero-content flex-col lg:flex-row border-2 rounded-2xl">
+              <img
+                src={cart.product_image}
+                alt={cart.product_title}
+                className="max-w-sm rounded-lg shadow-2xl"
+              />
+              <div className="flex flex-col justify-center p-2">
+                <h1 className="text-5xl font-bold">{cart.product_title}</h1>
+                <p className="py-4">{cart.description}</p>
+                <p className="py-2 font-bold text-2xl">Price: {cart.price}$</p>
+                <button 
+                  className="btn btn-primary" 
+                  onClick={() => handleDelete(cart.product_id)}
+                >
+                  Delete
+                </button>
+              </div>
             </div>
           </div>
-        </div>
-      ))}
+        ))
+      ) : (
+        <p className="text-center">Your cart is empty</p>
+      )}
     </div>
   );
 };

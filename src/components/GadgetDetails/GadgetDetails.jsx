@@ -9,7 +9,7 @@ const GadgetDetails = () => {
     const {product_id} = useParams();
     const id = parseInt(product_id);
     console.log(id);
-    // Need one data thats why use find 
+    // Need one data thats why use find
     const gadget = data.find(gadget => gadget.product_id === product_id)
     const {price,description,product_title,product_image,rating,specification} = gadget;
 

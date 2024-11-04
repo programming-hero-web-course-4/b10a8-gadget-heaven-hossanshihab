@@ -16,18 +16,33 @@ const Navbar = () => {
 
   const navLinks = (
     <>
-      <li className="text-white ">
-        <NavLink to="/" className=" hover:underline font-bold">
+      <li className="text-white">
+        <NavLink 
+          to="/" 
+          className={({ isActive }) => 
+            isActive ? "hover:underline font-bold text-yellow-400" : "hover:underline font-bold"
+          }
+        >
           Home
         </NavLink>
       </li>
-      <li className="text-white ">
-        <NavLink to="/statistics" className="hover:underline font-bold">
+      <li className="text-white">
+        <NavLink 
+          to="/statistics" 
+          className={({ isActive }) => 
+            isActive ? "hover:underline font-bold text-yellow-400" : "hover:underline font-bold"
+          }
+        >
           Statistics
         </NavLink>
       </li>
       <li className="text-white font-bold">
-        <NavLink to="/dashboard" className="hover:underline">
+        <NavLink 
+          to="/dashboard" 
+          className={({ isActive }) => 
+            isActive ? "hover:underline text-yellow-400" : "hover:underline"
+          }
+        >
           Dashboard
         </NavLink>
       </li>
