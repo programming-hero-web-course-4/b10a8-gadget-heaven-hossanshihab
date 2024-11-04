@@ -12,7 +12,7 @@ const AllGadget = () => {
       .then((data) => {
         setGadgets(data);
 
-        // Extract unique categories from the data
+        // Extract categories from the data
         const uniqueCategories = [
           ...new Set(data.map((gadget) => gadget.category))
         ];
@@ -20,7 +20,7 @@ const AllGadget = () => {
       });
   }, []);
 
-  // Filter gadgets based on the selected category
+  // gadgets based on the selected category
   const filteredGadgets = selectedCategory === "All Product"
     ? gadgets
     : gadgets.filter((gadget) => gadget.category === selectedCategory);
@@ -53,7 +53,6 @@ const AllGadget = () => {
         </ul>
       </div>
 
-      {/* Main Content */}
       <div className="w-3/4">
         <h1 className="text-5xl font-bold text-center p-10 text-purple-500">
           Explore Cutting-Edge Gadgets

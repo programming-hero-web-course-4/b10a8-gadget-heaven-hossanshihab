@@ -16,9 +16,9 @@ const GadgetDetails = () => {
 
     const handleAddToCart = (id) => {
       addToStoredCartList(id)
+      console.log(id);
     }
-
-    const handleAddToWish = (id) => {
+    const handleAddToWishList = (id) => {
       addToStoredWishList(id)
     }
 
@@ -49,7 +49,7 @@ const GadgetDetails = () => {
       <div className="flex items-center gap-5">
     
       <button onClick={()=>handleAddToCart(product_id)} className="btn bg-purple-500 text-white font-bold">Add To Cart</button>
-      <button onClick={()=>handleAddToWish(product_id)} className="btn">
+      <button onClick={()=>handleAddToWishList(product_id)} className="btn">
       <FaHeart style={{ color: 'red', fontSize: '24px' }} />
       </button>
       </div>
