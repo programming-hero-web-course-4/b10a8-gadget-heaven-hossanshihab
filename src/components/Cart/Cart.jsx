@@ -9,10 +9,10 @@ const Cart = () => {
 
   useEffect(() => {
     const storedCartList = getStoredCartList();
-    console.log("Stored Cart List:", storedCartList);
+    console.log( storedCartList);
 
     const storedCartListInt = storedCartList.map((id) => parseInt(id, 10));
-    console.log("Stored Cart List Int:", storedCartListInt);
+    console.log(storedCartListInt);
 
     if (allGadget && allGadget.length > 0) {
       const cartList = allGadget.filter((gadget) =>
@@ -37,14 +37,14 @@ const Cart = () => {
   };
 
   const handleDelete = (productId) => {
-    console.log("Deleting product with ID:", productId); 
+    console.log( productId); 
     const updatedCartList = cartList.filter(cart => cart.product_id !== productId);
-    console.log("Updated Cart List after deletion:", updatedCartList); 
+    console.log( updatedCartList); 
     setCartList(updatedCartList);
 
     const storedCartList = getStoredCartList();
     const updatedStoredCartList = storedCartList.filter(id => parseInt(id, 10) !== productId);
-    console.log("Updated Stored Cart List:", updatedStoredCartList); 
+    console.log(updatedStoredCartList); 
     updateStoredCartList(updatedStoredCartList); 
   };
 

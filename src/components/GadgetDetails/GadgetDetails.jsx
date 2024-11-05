@@ -1,7 +1,8 @@
 import { useLoaderData, useParams } from "react-router-dom";
 import { FaHeart } from 'react-icons/fa';
 import { addToStoredCartList, addToStoredWishList } from "../../utility/AddToDb";
-
+import { CiStar } from "react-icons/ci";
+import { BsCart4 } from "react-icons/bs";
 
 const GadgetDetails = () => {
     
@@ -44,11 +45,21 @@ const GadgetDetails = () => {
             
         </div>)
       }
-      <p>Rating: {rating}</p>
+      <p>Rating: </p>
+      <div className="flex items-center gap-2">
+      <p>{rating}</p>
+      <CiStar className="text-red-600" />
+      <CiStar className="text-red-600" />
+      <CiStar className="text-red-600" />
+      <CiStar className="text-red-600" />
+      </div>
 
       <div className="flex items-center gap-5">
     
-      <button onClick={()=>handleAddToCart(product_id)} className="btn bg-purple-500 text-white font-bold">Add To Cart</button>
+      <button onClick={()=>handleAddToCart(product_id)} className="btn bg-purple-500 text-white font-bold">
+      Add To Cart
+      <BsCart4 />
+      </button>
       <button onClick={()=>handleAddToWishList(product_id)} className="btn">
       <FaHeart style={{ color: 'red', fontSize: '24px' }} />
       </button>

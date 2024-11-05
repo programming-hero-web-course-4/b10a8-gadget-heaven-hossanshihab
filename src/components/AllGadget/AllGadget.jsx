@@ -20,6 +20,7 @@ const AllGadget = () => {
       });
   }, []);
 
+
   // gadgets based on the selected category
   const filteredGadgets = selectedCategory === "All Product"
     ? gadgets

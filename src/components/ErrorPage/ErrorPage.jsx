@@ -9,7 +9,9 @@ const ErrorPage = () => {
         <div>
             <h1 className=
             "text-7xl font-bold text-center"
-            >This is error page</h1>
+            >Error 404 <br />
+            Page not found.
+            </h1>
         </div>
     );
 };

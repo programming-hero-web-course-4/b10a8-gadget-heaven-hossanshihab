@@ -1,10 +1,11 @@
 import { useState, useEffect } from 'react';
 import { FaShoppingCart, FaHeart } from 'react-icons/fa';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 
 const Navbar = () => {
   const [cartCount, setCartCount] = useState(0);
   const [wishCount, setWishCount] = useState(0);
+  const location = useLocation(); 
 
   useEffect(() => {
     const storedCartList = JSON.parse(localStorage.getItem('cart-list')) || [];
@@ -13,6 +14,23 @@ const Navbar = () => {
     const storedWishList = JSON.parse(localStorage.getItem('wish-list')) || [];
     setWishCount(storedWishList.length);
   }, []);
+
+  // Update document title based on the current route
+  useEffect(() => {
+    switch (location.pathname) {
+      case '/':
+        document.title = 'Home | Gadget Heaven';
+        break;
+      case '/statistics':
+        document.title = 'Statistics | Gadget Heaven';
+        break;
+      case '/dashboard':
+        document.title = 'Dashboard | Gadget Heaven';
+        break;
+      default:
+        document.title = 'Gadget Heaven';
+    }
+  }, [location]);
 
   const navLinks = (
     <>
