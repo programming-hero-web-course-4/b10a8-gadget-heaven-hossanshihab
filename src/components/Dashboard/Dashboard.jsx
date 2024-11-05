@@ -14,8 +14,8 @@ const Dashboard = () => {
           </h2>
 
           <div className="flex gap-4">
-          <Link to="/cart"><button className="btn  bg-purple-700 text-white">Cart List</button></Link>
-          <Link to="/wish"><button className="btn bg-purple-700 text-white">Wish List</button></Link>
+          <Link to="/cart"><button className="btn  bg-yellow-300 text-black border-none">Cart List</button></Link>
+          <Link to="/wish"><button className="btn bg-yellow-300 text-black border-none">Wish List</button></Link>
           </div>
     </div>
   )
