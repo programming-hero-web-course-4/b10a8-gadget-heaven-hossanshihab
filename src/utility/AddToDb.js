@@ -50,5 +50,12 @@ const addToStoredWishList = (id) => {
 export const updateStoredCartList = (updatedList) => {
     localStorage.setItem('cart', JSON.stringify(updatedList));
   };
+export const updateStoredWishList = (updatedList) => {
+    localStorage.setItem('wish', JSON.stringify(updatedList));
+  };
+
+
+  
+   
 
 export {addToStoredCartList,getStoredCartList, addToStoredWishList,getStoredWishList}
