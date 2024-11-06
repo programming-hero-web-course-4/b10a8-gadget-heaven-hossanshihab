@@ -13,8 +13,8 @@ const Gadget = ({ gadget }) => {
             alt="Image"
           />
         </figure>
-        <div className="card-body text-center">
-          <h2 className="font-bold text-2xl">{product_title}</h2>
+        <div className="card-body">
+          <h2 className="font-bold">{product_title}</h2>
           <p className="font-semibold">Price: {price}$</p>
           <Link to={`/gadget/${product_id}`}><button className="btn bg-purple-700 text-white">Details</button></Link>
         </div>

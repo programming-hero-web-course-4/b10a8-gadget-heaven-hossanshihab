@@ -29,7 +29,7 @@ const AllGadget = () => {
   return (
     <div className="flex w-11/12 mx-auto">
       {/* Sidebar */}
-      <div className="w-1/4 p-5 bg-gray-100">
+      <div className="w-1/5  p-5">
         <h2 className="text-2xl font-bold mb-4">All Categories</h2>
         <ul className="space-y-2">
           <li

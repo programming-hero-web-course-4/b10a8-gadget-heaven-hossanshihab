@@ -1,32 +1,28 @@
+import bannerImage from '../../assets/banner.jpg';
 
-
-import bannerImage from '../../assets/banner.jpg'
 const Banner = () => {
   return (
-    <div className="bg-purple-800 text-white text-center p-5 space-y-6">
-      <h2 className="text-4xl font-bold">
+    <div className="bg-purple-700 text-white text-center py-14 px-5 rounded-b-3xl space-y-10">
+      <h2 className="text-5xl font-bold">
         Upgrade Your Tech Accessorize with <br />
         Gadget Heaven Accessories
       </h2>
-      <p className="mb-6">
-        Explore the latest gadgets that will take your experience to
-        the next level. From smart devices to  <br />
-        the coolest accessories, we have it all!
+      <p className="text-xl">
+        Explore the latest gadgets that will take your experience to the next level. 
+        From smart devices to <br /> the coolest accessories, we have it all!
       </p>
-      <button className="bg-white btn text-purple-500 px-6 py-2 rounded-full font-semibold hover:bg-gray-200">
+      <button className="bg-white text-purple-700 px-8 py-3 rounded-full font-semibold shadow-md hover:bg-gray-200 transition duration-200">
         Shop Now
       </button>
 
-      <div className=" flex justify-center">
+      <div className="mt-8 flex justify-center">
         <img
-          
           src={bannerImage}
           alt="VR Gadget"
-          className="rounded-lg border-4 border-white shadow-lg h-[300px] w-[600px]"
+          className="rounded-lg border-4 border-white shadow-lg h-[350px] w-[650px] object-cover"
         />
       </div>
     </div>
-    
   );
 };
 

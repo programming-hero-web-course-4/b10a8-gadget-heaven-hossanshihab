@@ -44,7 +44,7 @@ const Navbar = () => {
           Home
         </NavLink>
       </li>
-      <li className="text-white">
+      <li className="text-white"> 
         <NavLink 
           to="/statistics" 
           className={({ isActive }) => 
@@ -54,7 +54,7 @@ const Navbar = () => {
           Statistics
         </NavLink>
       </li>
-      <li className="text-white font-bold">
+      <li className="text-white">
         <NavLink 
           to="/dashboard" 
           className={({ isActive }) => 
@@ -88,6 +88,7 @@ const Navbar = () => {
                 </span>
               )}
             </button>
+            
           </NavLink>
           <NavLink to="/wish" className="relative">
             <button className="text-white hover:text-gray-300">
